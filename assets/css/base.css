@@ -126,7 +126,7 @@ html {
     outline: none;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 1.6rem;
@@ -152,4 +152,55 @@ html {
     color: #949494;
     background-color: #c3c3c3;
     /* filter: brightness(); */
+}
+
+/* Selection */
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none; 
+}
+
+.select-input__list::before {
+    position: absolute;
+    content: "";
+    border-width: 5px 100px;
+    border-style: solid;
+    border-color: transparent;
+    top: -5px;
+    right: 0;
+}
+
+.select-input__link {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
 }
