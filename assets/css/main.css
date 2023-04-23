@@ -1210,6 +1210,10 @@ i.home-product-item__like-icon-fill {
     top: 3px;
 }
 
+/* Pagination */
+.home-product__pagination {
+    margin: 48px 0 32px 0;
+}
 
 
 
